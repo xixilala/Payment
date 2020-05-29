@@ -1,4 +1,4 @@
-package com.autoai.firstdevelopmet.payment;
+package com.autoai.firstdevelopmet.payment.test;
 
 import androidx.annotation.Nullable;
 
@@ -9,6 +9,7 @@ import butterknife.OnClick;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.autoai.firstdevelopmet.payment.R;
 import com.autoai.firstdevelopmet.payment.base.BaseMvpActivity;
 import com.autoai.firstdevelopmet.payment.base.BaseObjectBean;
 import com.autoai.firstdevelopmet.payment.functionmodels.login.LoginPresenter;
@@ -17,7 +18,7 @@ import com.autoai.firstdevelopmet.payment.functionmodels.login.contract.LoginCon
 import com.autoai.firstdevelopmet.payment.widget.ProgressDialog;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class MainActivity extends BaseMvpActivity<LoginPresenter> implements LoginContract.View {
+public class LoginActivity extends BaseMvpActivity<LoginPresenter> implements LoginContract.View {
 
     @BindView(R.id.et_username_login)
     TextInputEditText etUsernameLogin;

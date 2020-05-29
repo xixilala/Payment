@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <!--MainActivity 主题颜色 -->
+    <!--LoginActivity 主题颜色 -->
     <color name="colorMainDrawerPrimary">#FE9B00</color>
     <color name="colorMainDrawerPrimaryDark">#FE9B00</color>
     <color name="colorMainDrawerAccent">#FE9B00</color>

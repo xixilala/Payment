@@ -59,5 +59,8 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
     //jetbrains 注解
     implementation 'org.jetbrains:annotations-java5:15.0'
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment:2.2.0'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
 
 }
