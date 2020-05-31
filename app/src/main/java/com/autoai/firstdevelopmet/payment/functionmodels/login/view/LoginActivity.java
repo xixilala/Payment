@@ -1,4 +1,4 @@
-package com.autoai.firstdevelopmet.payment.test;
+package com.autoai.firstdevelopmet.payment.functionmodels.login.view;
 
 import androidx.annotation.Nullable;
 
@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.autoai.firstdevelopmet.payment.R;
 import com.autoai.firstdevelopmet.payment.base.BaseMvpActivity;
 import com.autoai.firstdevelopmet.payment.base.BaseObjectBean;
-import com.autoai.firstdevelopmet.payment.functionmodels.login.LoginPresenter;
+import com.autoai.firstdevelopmet.payment.functionmodels.login.presenter.LoginPresenter;
 import com.autoai.firstdevelopmet.payment.functionmodels.login.bean.LoginBean;
 import com.autoai.firstdevelopmet.payment.functionmodels.login.contract.LoginContract;
 import com.autoai.firstdevelopmet.payment.widget.ProgressDialog;

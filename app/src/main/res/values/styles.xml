@@ -31,5 +31,9 @@
         <item name="colorAccent">@color/colorMainDrawerAccent</item>
     </style>
 
+    <style name="TransluventTheme" parent="AppTheme">
+
+    </style>
+
 
 </resources>

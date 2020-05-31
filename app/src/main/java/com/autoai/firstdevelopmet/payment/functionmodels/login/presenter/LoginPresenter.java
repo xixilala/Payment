@@ -1,4 +1,4 @@
-package com.autoai.firstdevelopmet.payment.functionmodels.login;
+package com.autoai.firstdevelopmet.payment.functionmodels.login.presenter;
 
 import com.autoai.firstdevelopmet.payment.base.BaseObjectBean;
 import com.autoai.firstdevelopmet.payment.base.BasePresenter;
