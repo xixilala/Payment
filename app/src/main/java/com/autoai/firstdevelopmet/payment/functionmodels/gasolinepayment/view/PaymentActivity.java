@@ -9,12 +9,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.autoai.firstdevelopmet.payment.R;
 import com.autoai.firstdevelopmet.payment.base.BaseMvpActivity;
+import com.autoai.firstdevelopmet.payment.functionmodels.gasolinepayment.adapter.PaymentFragmentsAdapter;
 import com.autoai.firstdevelopmet.payment.functionmodels.gasolinepayment.contract.PaymentContract;
 import com.autoai.firstdevelopmet.payment.functionmodels.gasolinepayment.presenter.PaymentPresenter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,6 +50,8 @@ public class PaymentActivity extends BaseMvpActivity<PaymentPresenter> implement
         //未登录，提示登录
         if (!isLogin) {
             showLoginDialog();
+        } else {
+            showPage();
         }
     }
 
@@ -93,9 +100,20 @@ public class PaymentActivity extends BaseMvpActivity<PaymentPresenter> implement
             case R.id.tv_search:
                 break;
             case R.id.ll_smart_add_sagoline:
+                viewpager.setCurrentItem(0,true);
                 break;
             case R.id.ll_my_order:
+                viewpager.setCurrentItem(1, true);
                 break;
         }
+    }
+
+    private void showPage(){
+        List<Fragment> fragments = new ArrayList<>();
+        fragments.add(SmartAddGasolineFragment.newInstance("加载智能加油"));
+        fragments.add(MyOrderFragment.newInstance("我的订单"));
+        viewpager.setOffscreenPageLimit(0);
+        PaymentFragmentsAdapter adapter = new PaymentFragmentsAdapter(getSupportFragmentManager(), fragments);
+        viewpager.setAdapter(adapter);
     }
 }
