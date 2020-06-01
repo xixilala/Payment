@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/background_style_dialog_login"
+        >
+        <TextView
+            android:layout_width="470px"
+            android:layout_height="204px"
+            android:gravity="center"
+            android:text="@string/dialog_login_title"
+            android:textColor="@color/color_text_white"
+            android:textSize="28px"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/tab_login_nor"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_logindialog_cancel"
+                android:layout_width="0px"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:background="@color/color_login_dialog"
+                android:text="@string/cancel"
+                android:textColor="@color/ffc8c8c8"
+                android:textSize="32px"
+                />
+            <Button
+                android:id="@+id/btn_logindialog_login"
+                android:layout_width="0px"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:background="@color/color_positive"
+                android:text="@string/login"
+                android:textColor="@color/color_text_white"
+                android:textSize="32px"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

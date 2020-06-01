@@ -11,7 +11,7 @@
 
     <!--Toolbar Back 颜色-->
     <color name="color_toolbar_appbar_bg">#FE9B00</color>
-    <color name="color_toolbar_text">#FFFFFF</color>
+    <color name="color_text_white">#FFFFFF</color>
     <color name="color_main_toolbar_appbar_bg">#FE9B00</color>
 
 
@@ -35,5 +35,14 @@
     <!--登录界面 忘记密码 新用户注册 文字的颜色-->
     <color name="color_login_text">#FE9B00</color>
 
+    <!--登录提示弹窗颜色-->
+    <color name="color_login_dialog">#FF141A34</color>
+    <color name="color_positive">#FF4281FF</color>
+    <color name="ffc8c8c8">#FFC8C8C8</color>
+
+    <!--常用颜色-->
+    <color name="black">#000000</color>
+    <color name="_0C1434">#0C1434</color>
+    <color name="_030615">#030615</color>
 
 </resources>
