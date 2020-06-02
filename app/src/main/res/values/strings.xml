@@ -22,6 +22,9 @@
     <string name="search">搜索</string>
     <string name="my_order">我的订单</string>
     <string name="smart_add_gasoline">智慧加油</string>
+    <string name="all_brand">全部品牌</string>
+    <string name="nearest">距离最近</string>
+    <string name="cheapest">价格最低</string>
 
 
 

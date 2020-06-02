@@ -52,15 +52,17 @@
             android:gravity="center"
             >
             <ImageView
+                android:id="@+id/iv_smart_add_sag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/left_smart_add_gasoline"
+                android:src="@mipmap/left_smart_add_gas_selected"
                 />
             <TextView
+                android:id="@+id/tv_smart_add_gas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/smart_add_gasoline"
-                android:textColor="#FFFFFFFF"
+                android:textColor="@color/color_text_white"
                 android:textSize="32px"
                 android:layout_marginLeft="33px"
                 />
@@ -75,15 +77,17 @@
             android:gravity="center"
             >
             <ImageView
+                android:id="@+id/iv_my_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/left_order"
                 />
             <TextView
+                android:id="@+id/tv_my_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_order"
-                android:textColor="#FFFFFFFF"
+                android:textColor="@color/color_text_white"
                 android:textSize="32px"
                 android:layout_marginLeft="33px"
                 />
@@ -98,6 +102,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/ll_title"
         android:layout_toRightOf="@+id/ll_left_parent"
+        android:background="@drawable/background_color_gradient_up_to_down"
         />
 
 </RelativeLayout>

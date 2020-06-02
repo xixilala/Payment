@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,8 +36,20 @@ public class PaymentActivity extends BaseMvpActivity<PaymentPresenter> implement
     LinearLayout llMyOrder;
     @BindView(R.id.viewpager)
     ViewPager viewpager;
+    @BindView(R.id.ll_title)
+    LinearLayout llTitle;
+    @BindView(R.id.ll_left_parent)
+    LinearLayout llLeftParent;
+    @BindView(R.id.tv_my_order)
+    TextView tvMyOrder;
+    @BindView(R.id.tv_smart_add_gas)
+    TextView tvSmartAddGas;
+    @BindView(R.id.iv_my_order)
+    ImageView ivMyOrder;
+    @BindView(R.id.iv_smart_add_sag)
+    ImageView ivSmartAddSag;
     //是否登录
-    private boolean isLogin = true;
+    private boolean isLogin = false;
 
     @Override
     protected int getLayoutId() {
@@ -50,7 +63,11 @@ public class PaymentActivity extends BaseMvpActivity<PaymentPresenter> implement
         //未登录，提示登录
         if (!isLogin) {
             showLoginDialog();
+            llTitle.setVisibility(View.GONE);
+            llLeftParent.setVisibility(View.GONE);
         } else {
+            llTitle.setVisibility(View.VISIBLE);
+            llLeftParent.setVisibility(View.VISIBLE);
             showPage();
         }
     }
@@ -88,6 +105,9 @@ public class PaymentActivity extends BaseMvpActivity<PaymentPresenter> implement
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                llTitle.setVisibility(View.VISIBLE);
+                llLeftParent.setVisibility(View.VISIBLE);
+                showPage();
                 loginDialog.dismiss();
             }
         });
@@ -100,20 +120,48 @@ public class PaymentActivity extends BaseMvpActivity<PaymentPresenter> implement
             case R.id.tv_search:
                 break;
             case R.id.ll_smart_add_sagoline:
-                viewpager.setCurrentItem(0,true);
+                setNavigationBarState(false);
                 break;
             case R.id.ll_my_order:
-                viewpager.setCurrentItem(1, true);
+                setNavigationBarState(true);
                 break;
         }
     }
 
     private void showPage(){
+        setNavigationBarState(false);
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(SmartAddGasolineFragment.newInstance("加载智能加油"));
         fragments.add(MyOrderFragment.newInstance("我的订单"));
         viewpager.setOffscreenPageLimit(0);
         PaymentFragmentsAdapter adapter = new PaymentFragmentsAdapter(getSupportFragmentManager(), fragments);
         viewpager.setAdapter(adapter);
+    }
+
+    /***
+     * 导航栏状态
+     * @param isSelectOrderList 是否选中我的订单
+     */
+    private void setNavigationBarState(boolean isSelectOrderList){
+        if (isSelectOrderList){
+            //背景，文字，图标
+            llMyOrder.setBackgroundColor(getColor(R.color._242B47));
+            tvMyOrder.setTextColor(getColor(R.color.color_text_white));
+            ivMyOrder.setImageResource(R.mipmap.left_order_selected);
+
+            llSmartAddSagoline.setBackground(null);
+            tvSmartAddGas.setTextColor(getColor(R.color.ffc8c8c8));
+            ivSmartAddSag.setImageResource(R.mipmap.left_smart_add_gas);
+            viewpager.setCurrentItem(1, true);
+        } else {
+            llSmartAddSagoline.setBackgroundColor(getColor(R.color._242B47));
+            tvSmartAddGas.setTextColor(getColor(R.color.color_text_white));
+            ivSmartAddSag.setImageResource(R.mipmap.left_smart_add_gas_selected);
+
+            llMyOrder.setBackground(null);
+            tvMyOrder.setTextColor(getColor(R.color.ffc8c8c8));
+            ivMyOrder.setImageResource(R.mipmap.left_order);
+            viewpager.setCurrentItem(0,true);
+        }
     }
 }

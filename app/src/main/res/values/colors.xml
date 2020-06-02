@@ -44,5 +44,11 @@
     <color name="black">#000000</color>
     <color name="_0C1434">#0C1434</color>
     <color name="_030615">#030615</color>
+    <color name="_242B47">#242B47</color>
+    <color name="FF4281FF">#FF4281FF</color>
+    <color name="FFF25D52">#FFF25D52</color>
+    <color name="FF999999">#FF999999</color>
+    <color name="C8C8C8">#C8C8C8</color>
+    <color name="_1AFFFFFF">#1AFFFFFF</color>
 
 </resources>

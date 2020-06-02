@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_text_white"
     >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="智慧加油"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68px"
+        android:orientation="horizontal"
+        android:paddingTop="7.5px"
+        >
+        <TextView
+            android:id="@+id/tv_gas_num"
+            android:layout_width="wrap_content"
+            android:layout_height="68px"
+            android:gravity="center"
+            android:text="92#"
+            android:textColor="#FFC8C8C8"
+            android:textSize="28px"
+            android:layout_marginLeft="39.5px"
+            android:drawableRight="@mipmap/pull_down"
+            android:drawablePadding="12.5px"
+            />
+        <TextView
+            android:id="@+id/tv_gas_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="68px"
+            android:gravity="center"
+            android:text="@string/all_brand"
+            android:textColor="#FFC8C8C8"
+            android:textSize="28px"
+            android:layout_marginLeft="54px"
+            android:drawableRight="@mipmap/pull_down"
+            android:drawablePadding="12.5px"
+            />
+
+        <TextView
+            android:id="@+id/tv_gas_nearest"
+            android:layout_width="wrap_content"
+            android:layout_height="68px"
+            android:gravity="center"
+            android:text="@string/nearest"
+            android:textColor="@color/ffc8c8c8"
+            android:textSize="28px"
+            android:layout_marginLeft="52px"
+            />
+
+        <TextView
+            android:id="@+id/tv_gas_cheapest"
+            android:layout_width="wrap_content"
+            android:layout_height="68px"
+            android:gravity="center"
+            android:text="@string/cheapest"
+            android:textColor="@color/ffc8c8c8"
+            android:textSize="28px"
+            android:layout_marginLeft="60px"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_smart_select_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/_1AFFFFFF"
         />
 
-</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_gasStation_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="7.5px"
+        />
+
+</LinearLayout>
