@@ -87,6 +87,10 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract int getLayoutId();
 
+    protected View getCurrentView(){
+        return mView;
+    }
+
     /**
      * 当视图初始化，并且对用户可见的时候，去真正的加载数据
      */
